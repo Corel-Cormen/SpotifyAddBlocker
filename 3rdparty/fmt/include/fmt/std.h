@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <exception>
 #include <memory>
-#include <pthread.h>
+#include <thread>
 #include <type_traits>
 #include <typeinfo>
 #include <utility>
@@ -147,7 +147,7 @@ FMT_END_NAMESPACE
 FMT_BEGIN_NAMESPACE
 FMT_EXPORT
 template <typename Char>
-struct formatter<pthread_t, Char> : basic_ostream_formatter<Char> {};
+struct formatter<std::thread::id, Char> : basic_ostream_formatter<Char> {};
 FMT_END_NAMESPACE
 
 #ifdef __cpp_lib_optional
