@@ -6,3 +6,5 @@ target_include_directories(ResourceVerifier PUBLIC
                             ${COMMON_TOOLS_INCLUDE_DIR}
                             ${FMT_INCLUDE_DIR}
                             ${CMAKE_CURRENT_SOURCE_DIR}/_inc)
+
+target_link_libraries(ResourceVerifier WindowsApiWrapper ${FMT_LIBRARY})

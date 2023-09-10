@@ -1,9 +1,11 @@
 #include <iostream>
 #include "WinResourceVerifer.hpp"
+#include "WindowsWrapper.hpp"
 
 int main()
 {
-    WinResourceVerifer verifier;
+    WindowsWrapper windowsWrapper;
+    WinResourceVerifer verifier(windowsWrapper);
     auto result = verifier.checkResourceAvailability();
     std::cout << "Verifier file = " << result << std::endl;
 }

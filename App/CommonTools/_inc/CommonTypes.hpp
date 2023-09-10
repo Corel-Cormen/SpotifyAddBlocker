@@ -4,7 +4,7 @@
 enum Error_Code_T
 {
     SUCCESS = 0,
-    ERROR_CODE = 1,
+    FLAW = 1,
     NOEXIST = 2
 };
 

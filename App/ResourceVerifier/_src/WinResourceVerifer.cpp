@@ -1,9 +1,8 @@
 #include "WinResourceVerifer.hpp"
 #include "fmt/printf.h"
 
-#include <windows.h>
-
-WinResourceVerifer::WinResourceVerifer()
+WinResourceVerifer::WinResourceVerifer(WindowsWrapper& _windowsWrapper) :
+    windowsWrapper(_windowsWrapper)
 {
 
 }
@@ -11,10 +10,9 @@ WinResourceVerifer::WinResourceVerifer()
 Error_Code_T WinResourceVerifer::checkResourceAvailability()
 {
     Error_Code_T result;
-
     const char* resourcePath = ".\\Resource";
 
-    DWORD dwAttrib = GetFileAttributesA(resourcePath);
+    DWORD dwAttrib = windowsWrapper.getFileAttributesA(resourcePath); 
 
     if(dwAttrib != INVALID_FILE_ATTRIBUTES)
     {
@@ -26,13 +24,13 @@ Error_Code_T WinResourceVerifer::checkResourceAvailability()
         else
         {
             fmt::printf("File is not directory\n");
-            result = Error_Code_T::NOEXIST;
+            result = Error_Code_T::FLAW;
         }
     }
     else
     {
         fmt::printf("Invalid search directory\n");
-        result = Error_Code_T::ERROR_CODE;
+        result = Error_Code_T::NOEXIST;
     }
 
     return result;
