@@ -3,4 +3,4 @@ add_subdirectory(WindowsApiWrapper)
 
 add_executable(SpotifyAddBlocker main.cpp)
 
-target_link_libraries(SpotifyAddBlocker ResourceVerifier ${FMT_LIBRARY})
+target_link_libraries(SpotifyAddBlocker ResourceVerifier)

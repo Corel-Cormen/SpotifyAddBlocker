@@ -1,4 +1,5 @@
-set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/_src/WindowsWrapper.cpp)
+set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/_src/ComObjBaseWrapper.cpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/_src/WindowsWrapper.cpp)
 
 add_library(WindowsApiWrapper ${SOURCES})
 

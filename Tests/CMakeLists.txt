@@ -14,4 +14,5 @@ target_link_libraries(SpotifyAddBlockerTest ${GTEST_LIBRARY}
                                             ResourceVerifier)
 
 target_include_directories(SpotifyAddBlockerTest PUBLIC ${GTEST_INCLUDE_DIR}
-                                                        ${CMAKE_CURRENT_SOURCE_DIR}/_mock)
+                                                        ${CMAKE_CURRENT_SOURCE_DIR}/_mock
+                                                        ${CMAKE_CURRENT_SOURCE_DIR}/_stub)

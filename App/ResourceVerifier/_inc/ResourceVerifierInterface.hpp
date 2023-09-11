@@ -11,6 +11,8 @@ public:
     virtual ~ResourceVerifierInterface() {}
 
     virtual Error_Code_T checkResourceAvailability() = 0;
+
+    virtual Error_Code_T checkResourceIntegrity() = 0;
 };
 
 #endif // RESOURCEVERIFIERINTERFACE_HPP

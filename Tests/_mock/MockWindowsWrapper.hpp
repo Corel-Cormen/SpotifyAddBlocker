@@ -7,7 +7,7 @@
 class MockWindowsWrapper : public WindowsWrapper
 {
 public:
-    MOCK_METHOD(DWORD WINAPI, getFileAttributesA, (LPCSTR filePath), (override));
+    MOCK_METHOD(DWORD WINAPI, getFileAttributesW, (LPCWSTR filePath), (override));
 };
 
 #endif // MOCKWINDOWSWRAPPER_HPP

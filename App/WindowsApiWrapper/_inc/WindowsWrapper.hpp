@@ -6,7 +6,7 @@
 class WindowsWrapper
 {
 public:
-    virtual DWORD WINAPI getFileAttributesA(LPCSTR filePath);
+    virtual DWORD WINAPI getFileAttributesW(LPCWSTR filePath);
 };
 
 #endif // WINDOWSWRAPPER_HPP

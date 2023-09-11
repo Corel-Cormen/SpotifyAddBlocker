@@ -1,6 +1,6 @@
 #include "WindowsWrapper.hpp"
 
-DWORD WINAPI WindowsWrapper::getFileAttributesA(LPCSTR filePath)
+DWORD WINAPI WindowsWrapper::getFileAttributesW(LPCWSTR filePath)
 {
-    return GetFileAttributesA(filePath);
+    return GetFileAttributesW(filePath);
 }
